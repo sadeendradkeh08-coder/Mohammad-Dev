@@ -1,0 +1,627 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>محمد عطاالله | موقع هدية شكر </title>
+
+<style>
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --green: #00e69a;
+    --blue: #168cff;
+    --bg: #050b0b;
+    --card: #0d1719;
+    --border: #183b3c;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: #f2f5f5;
+    line-height: 1.9;
+}
+
+header {
+    min-height: 430px;
+    padding: 45px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    flex-wrap: wrap;
+    background: radial-gradient(circle at top left, #103b39, transparent 45%),
+                linear-gradient(135deg, #050b0b, #091b25);
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 260px;
+}
+
+.small-title {
+    color: var(--green);
+}
+
+h1 {
+    font-size: clamp(35px, 5vw, 55px);
+    line-height: 1.4;
+    margin: 10px 0;
+}
+
+h1 span {
+    color: var(--green);
+}
+
+.hero-text p {
+    color: #c5d2d5;
+    max-width: 570px;
+}
+
+.profile {
+    width: 280px;
+    max-width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 2px solid var(--green);
+    box-shadow: 0 0 25px #00e69a22;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 14px;
+    background: #071011f5;
+    border-bottom: 1px solid var(--border);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: linear-gradient(100deg, var(--green), var(--blue));
+    color: #03100d;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 22px;
+    background: linear-gradient(100deg, var(--green), var(--blue));
+    color: #03100d;
+    text-decoration: none;
+    border-radius: 9px;
+    font-weight: bold;
+}
+
+section {
+    padding: 50px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-title h2 {
+    color: var(--green);
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.section-title p {
+    color: #aababc;
+    margin-top: 0;
+}
+
+.about-box {
+    max-width: 900px;
+    margin: auto;
+    padding: 25px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-right: 4px solid var(--green);
+    border-radius: 13px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    padding: 22px;
+    background: linear-gradient(145deg, #0d191b, #091116);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: var(--green);
+}
+
+.card h3 {
+    color: var(--green);
+    margin-top: 0;
+}
+
+.card p {
+    color: #c1cdcf;
+    margin-bottom: 0;
+}
+
+.number {
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--blue);
+}
+
+.blue-title {
+    color: #53aaff !important;
+}
+
+.alt-section {
+    background: #081214;
+    border-top: 1px solid #102a2b;
+    border-bottom: 1px solid #102a2b;
+}
+
+.song-box, .lyrics {
+    max-width: 700px;
+    margin: auto;
+    padding: 25px;
+    text-align: center;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+}
+
+audio {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.lyrics p {
+    color: #d5e5ee;
+    line-height: 2.2;
+}
+
+.dua {
+    border-right: 3px solid var(--blue);
+}
+
+.dua h3 {
+    color: #6bb6ff;
+}
+
+.final-message {
+    text-align: center;
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    background: linear-gradient(135deg, #0b201c, #0b1725);
+}
+
+.final-message h2 {
+    color: var(--green);
+}
+
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    background: #030707;
+    color: #aababc;
+    border-top: 1px solid var(--border);
+}
+
+footer span {
+    color: var(--green);
+}
+
+@media (max-width: 650px) {
+    header {
+        text-align: center;
+        justify-content: center;
+        padding: 35px 6%;
+    }
+
+    .profile {
+        width: 230px;
+        height: 290px;
+    }
+
+    section {
+        padding: 40px 6%;
+    }
+
+    nav {
+        position: static;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- الرئيسية -->
+<header id="home">
+    <div class="hero-text">
+        <div class="small-title">الشغف بالتقنية والتعلم المستمر</div>
+
+        <h1>محمد <span>عطاالله</span></h1>
+
+        <p>
+            مطور ومهتم بمجال تكنولوجيا المعلومات
+            أسعى إلى تطوير مهاراتي في البرمجة وتطوير مواقع الويب
+            وبناء مشاريع تقنية مفيدة ومشاركة المعرفة مع الآخرين.
+        </p>
+
+        <a href="#about" class="hero-button">تعرفو على محمد عطاالله أكثر</a>
+    </div>
+
+    <!-- ضعي صورة محمد في مجلد الموقع باسم profile.jpg -->
+    <img src="profile.jpg" alt="صورة محمد عطاالله" class="profile">
+</header>
+
+<nav>
+    <a href="#home">الرئيسية</a>
+    <a href="#about">عن محمد</a>
+    <a href="#skills">اهتماماتي</a>
+    <a href="#achievements">إنجازاتي</a>
+    <a href="#programming">البرمجة وBTEC</a>
+    <a href="#students">مساعدة الطلاب</a>
+    <a href="#music">الموسيقى</a>
+    <a href="#lyrics">كلمات جميلة</a>
+    <a href="#duaa">أدعية لمحمد</a>
+    <a href="#message">رسالة لمحمد</a>
+</nav>
+
+<main>
+
+<!-- التعريف الشخصي -->
+<section id="about">
+    <div class="section-title">
+        <h2>من هو محمد عطاالله؟</h2>
+        <p>رحلتي في عالم تكنولوجيا المعلومات</p>
+    </div>
+
+    <div class="about-box">
+        <p>في فضاء رقمي لا يعترف إلا بالتميز، يقف محمد عطاالله كمطور لا يكتفي بمواكبة التكنولوجيا، بل يعيد صياغتها برؤية متقدة وشغف لا يعرف الحدود.
+             انطلقت رحلته من شغف أصيل بالاكتشاف، لتتحول سريعاً إلى مسيرة قائمة على العمل الحي، والتجربة الجريئة، وبناء مشاريع ويب فائقة الدقة تتحدى المألوف وتخطف الأنظار. يمتلك عقلية ابتكارية تجمع بين صرامة التفكير البرمجي وسرعة التطور؛ فلا مكان للحلول التقليدية حيث يعمل، بل ترجمة عملية للأفكار المعقدة إلى منصات رقمية نابضة بالحياة، راسخاً حضوره كطاقة تقنية تصنع الفارق وتنشر أثر المعرفة أينما حلّت
+        </p>
+    </div>
+</section>
+
+<!-- اهتمامات محمد -->
+<section id="skills" class="alt-section">
+    <div class="section-title">
+        <h2 class="blue-title">اهتمامات محمد عطاالله</h2>
+        <p>مجالات تقنية أسعى إلى التعلم والتطور فيها</p>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <h3>تطوير مواقع الويب</h3>
+            <p>
+                أهتم بتصميم وتطوير المواقع باستخدام HTML وCSS
+                والتعرف إلى طرق جعل المواقع منظمة وسهلة الاستخدام.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>البرمجة والتطبيقات</h3>
+            <p>
+                أعمل على تطوير فهمي للبرمجة والتعرف إلى كيفية
+                بناء البرامج والتطبيقات وحل المشكلات بطريقة عملية.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>تطوير الألعاب</h3>
+            <p>
+                أستكشف عالم الألعاب وكيفية تصميم أفكار تفاعلية
+                وتحويلها إلى مشاريع يمكن تجربتها والاستمتاع بها.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>الشبكات والأمن السيبراني</h3>
+            <p>
+                أهتم بفهم الشبكات وكيفية اتصال الأجهزة
+                والتعرف إلى أساسيات حماية المعلومات والأنظمة.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>الذكاء الاصطناعي</h3>
+            <p>
+                أتابع التطورات في الذكاء الاصطناعي وكيف يمكن
+                الاستفادة منه في التعلم وتطوير الحلول التقنية.
+            </p>
+        </div>
+        
+        <div class="card">
+            <h3>حاضر في المساعده</h3>
+            <p>
+                يساعدهم ولا يرفضو لهم اي دلب مهما كان ويساعدهم في المهمات 
+                اذا كان خطأ في المهمة شغوف متمرس يحب الخير لكا كل الاحترام
+            </p>
+        </div>
+        </div>
+    </div>
+</section>
+
+<!-- إنجازات محمد -->
+<section id="achievements">
+    <div class="section-title">
+        <h2>إنجازات محمد عطاالله</h2>
+        <p>كل خطوة جديدة هي فرصة للتعلم والتقدم</p>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <div class="number">1000+</div>
+            <h3>مشترك على يوتيوب</h3>
+            <p>
+                الوصول إلى ألف مشترك خطوة جميلة في رحلة محمد
+                وتعكس أهمية الاستمرار والاجتهاد لتحقيق الأهداف.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>صناعة منصة لي مساعدة الطلاب</h3>
+            <p>
+                صنع منصة لتعليم كل طلاب ال بيتك من جميع التخصصات وحرص على مشاركة معلوماته مع الطلبة ومساعدنهم شكرا لك على جهودك العظيمة 
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>مشاركة المعرفة</h3>
+            <p>
+                يهتم محمد بمساعدة الطلاب وتوضيح المعلومات
+                ومشاركة ما يتعلمه ليستفيد منه الآخرون.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>العمل بروح التعاون</h3>
+            <p>
+                يؤمن محمد بأهمية التعاون وتبادل الخبرات
+                والاستفادة من الأفكار المختلفة لتطوير العمل.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- البرمجة وBTEC -->
+<section id="programming" class="alt-section">
+    <div class="section-title">
+        <h2 class="blue-title">محمد عطاالله والبرمجة وBTEC</h2>
+        <p>التعلم بالتجربة والتطبيق</p>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <h3>تطوير الويب</h3>
+            <p>
+                يهتم محمد ببناء صفحات الويب وتنسيقها
+                والعمل على جعلها واضحة وسهلة الاستخدام.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>تعلم Python</h3>
+            <p>
+                تساعد البرمجة محمد على فهم المنطق
+                وتنظيم الخطوات والعمل على حل المشكلات.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>دراسة BTEC</h3>
+            <p>
+                يهتم محمد بالمحتوى التقني والتعلم العملي
+                وفهم متطلبات المشاريع والواجبات التعليمية.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>تطوير المشاريع</h3>
+            <p>
+                يسعى محمد إلى تحويل الأفكار إلى مشاريع عملية
+                وتطويرها كلما اكتسب معرفة وخبرة جديدة.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- مساعدة الطلاب -->
+<section id="students">
+    <div class="section-title">
+        <h2>محمد عطاالله ومساعدة الطلاب</h2>
+        <p>مشاركة المعرفة تجعل التعلم أسهل</p>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <h3>المجموعات التعليمية</h3>
+            <p>
+                يهتم محمد بالمجموعات التعليمية التي تساعد الطلاب
+                على تبادل المعلومات والاستفادة من الشروحات.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>الإجابة عن الأسئلة</h3>
+            <p>
+                يركز محمد على توضيح الأفكار ومساعدة الطلاب
+                على فهم الأسئلة والموضوعات التي يدرسونها.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>مساعدة طلاب BTEC</h3>
+            <p>
+                يسعى محمد إلى تبسيط المعلومات التقنية
+                ومساعدة الطلاب على تنظيم أفكارهم وفهم مشاريعهم.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- الموسيقى -->
+<section id="music" class="alt-section">
+    <div class="section-title">
+        <h2 class="blue-title">الموسيقى في عالم محمد عطاالله</h2>
+        <p>مساحة للمقاطع الصوتية المفضلة</p>
+    </div>
+
+    <div class="song-box">
+        <h3>المقطع الصوتي</h3>
+        
+
+        <!-- ضعي الملف الصوتي باسم song.mp3 داخل مجلد الموقع -->
+        <audio controls>
+            <source src="song.mp3.mp3" type="audio/mpeg">
+            
+        </audio>
+    </div>
+</section>
+<!-- أدعية محمد -->
+<section id="duaa" class="alt-section">
+    <div class="section-title">
+        <h2 class="blue-title">أدعية لمحمد عطاالله</h2>
+        <p>دعوات بالخير والراحة والتوفيق لمحمد</p>
+    </div>
+
+    <div class="cards">
+        <div class="card dua">
+            <h3>دعاء التوفيق</h3>
+            <p>
+                اللهم وفق محمد عطاالله في حياته ودراسته وعمله
+                وافتح له أبواب الخير ويسر له أموره
+                واكتب له النجاح في كل خطوة.
+            </p>
+        </div>
+
+        <div class="card dua">
+            <h3>دعاء راحة القلب</h3>
+            <p>
+                اللهم ارزق محمد عطاالله راحة تملأ قلبه
+                وسكينة تسكن روحه وفرحًا لا ينقطع
+                واجعل أيامه مليئة بالطمأنينة.
+            </p>
+        </div>
+
+        <div class="card dua">
+            <h3>دعاء العلم النافع</h3>
+            <p>
+                اللهم زد محمد عطاالله علمًا نافعًا وفهمًا واسعًا
+                وبارك له في جهده ووقته
+                واجعل علمه سببًا في نفع الآخرين.
+            </p>
+        </div>
+
+        <div class="card dua">
+            <h3>دعاء تحقيق الأمنيات</h3>
+            <p>
+                اللهم حقق لمحمد عطاالله ما يتمنى إن كان فيه خير له
+                واكتب له أجمل الأقدار
+                وارزقه من فضلك ما يسعد قلبه.
+            </p>
+        </div>
+
+        <div class="card dua">
+            <h3>دعاء الحفظ والعافية</h3>
+            <p>
+                اللهم احفظ محمد عطاالله بعينك التي لا تنام
+                وارزقه الصحة والعافية
+                واصرف عنه كل سوء.
+            </p>
+        </div>
+
+        <div class="card dua">
+            <h3>دعاء المستقبل</h3>
+            <p>
+                اللهم اكتب لمحمد عطاالله مستقبلًا جميلًا
+                مليئًا بالخير والإنجازات والفرص الطيبة
+                ووفقه لما تحب وترضى.
+            </p>
+        </div>
+
+        <div class="card dua">
+            <h3>دعاء الرزق والبركة</h3>
+            <p>
+                اللهم ارزق محمد عطاالله رزقًا واسعًا مباركًا فيه
+                وبارك له في حياته وعمله
+                واجعل الخير رفيقًا له أينما كان.
+            </p>
+        </div>
+
+        <div class="card dua">
+            <h3>دعاء السعادة</h3>
+            <p>
+                اللهم أسعد قلب محمد عطاالله
+                وأبدل تعبه راحة وأمله فرحًا
+                واكتب له أيامًا أجمل مما يتمنى.
+            </p>
+        </div>
+    </div>
+
+    <div class="about-box" style="margin-top:25px; text-align:center;">
+        اللهم صل وسلم وبارك على سيدنا محمد وعلى آله وصحبه أجمعين
+        <br>
+        اللهم آمين يا رب العالمين 🤍
+    </div>
+</section>
+
+<!-- رسالة لمحمد -->
+<section id="message">
+    <div class="final-message">
+        <h2>إلى محمد عطاالله 💚</h2>
+
+        <p>
+            أتمنى لمحمد عطاالله دوام النجاح والتوفيق
+            وأن يستمر في التعلم وتطوير مهاراته
+            وأن يحقق أهدافه في مجال تكنولوجيا المعلومات.
+        </p>
+
+        <p>
+            وصوله إلى ألف مشترك ومشاركته للمعرفة
+            خطوات جميلة في رحلته
+            وأسأل الله أن يبارك له في علمه ووقته
+            وأن يجعل القادم مليئًا بالخير والنجاح.
+        </p>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>جميع الحقوق محفوظة © <span>محمد عطاالله</span></p>
+    <p>تعلم مستمر وطموح وأثر جميل 💚💙</p>
+</footer>
+
+</body>
+</html>
